@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda Caro y Jonathan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Brush+Script+MT&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Boda Caro y Jonathan" />
+  	<link rel="image_src" href="https://github.com/Stardustsigns/webs/blob/tiacaro/portada.png?raw=true" />
+	<meta property="og:image" content="https://github.com/Stardustsigns/webs/blob/tiacaro/portada.png?raw=true" />
+    <meta property="og:type" content="website" />
+</head>
+<body>
+    <!-- Sección del Video -->
+    <section id="video-section">
+        <video autoplay muted loop playsinline>
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+    </section>
+
+    <!-- Apartado "Estás Invitado" con cita bíblica -->
+    <section id="wedding-date" class="hidden">
+        <p class="invitation-quote">
+            Más valen dos que uno, pues mayor provecho obtienen de su trabajo. Y si uno de ellos cae, el otro lo levanta. <br>
+            Eclesiastés 4:9-10
+        </p>
+        <p class="invitation-quote">Hay momentos en la vida que son muy especiales por sí solos, pero al compartirlos con personas tan especiales como ustedes, se convierten en momentos imposibles de olvidar.        </p>
+        <h3> Sábado 14 de Junio </h3>
+        <p>Solo Faltan</p>
+        <div id="countdown" class="countdown-container">
+            <div class="countdown-circle">
+                <span id="days">00</span>
+                <p>Días</p>
+            </div>
+            <div class="countdown-circle">
+                <span id="hours">00</span>
+                <p>Horas</p>
+            </div>
+            <div class="countdown-circle">
+                <span id="minutes">00</span>
+                <p>Minutos</p>
+            </div>
+            <div class="countdown-circle">
+                <span id="seconds">00</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+        <a href="boda_carolina_jonathan.ics" download class="calendar-button">Agregar al Calendario</a>
+    </section>
+
+    <!-- Detalles del evento -->
+    <section id="details" class="hidden">
+        <h3>Detalles del Evento</h3>
+
+        <div class="location-box">
+            <h2>Misa</h2>
+            <img src="iglesia.jpg" alt="Parroquia Nuestra Señora del Sagrado Corazón">
+            <p><strong>Parroquia Nuestra Señora del Sagrado Corazón</strong></p>
+            <p>6:00 PM - 7:00 PM</p>
+            <a href="https://maps.app.goo.gl/H2QAgAG2hX5EJjuu8" target="_blank">Ver en Google Maps</a>
+        </div>
+
+        <div class="location-box">
+            <h2>Recepción</h2>
+            <img src="jardin.jpg" alt="Hacienda El Triunfo">
+            <p><strong>Hacienda El Triunfo</strong></p>
+            <p>8:00 PM - 1:00 AM</p>
+            <a href="https://maps.app.goo.gl/2pw5Jbpd5LBHCuYr5" target="_blank">Ver en Google Maps</a>
+        </div>
+    </section>
+
+
+
+    <!-- Apartado Vestimenta -->
+    <section id="dress-code" class="hidden">
+        <h3>Código de vestimenta</h3>
+        <div class="dress-code-images">
+            <img src="camiseta.png" alt="Ícono de camisa" class="icon">
+            <span class="plus-symbol">+</span>
+            <img src="traje_bano.png" alt="Ícono de traje de baño" class="icon">
+        </div>
+        <p class="dress-code-text">Formal</p>
+        <p class="dress-code-text">Preparense para una boda llena de colores, dejen el blanco para la novia</p>
+        </div>
+        <p class="dress-code-text"><strong>Nota:</strong> Habrá alberca, por si quieres darte un chapuzón</p>
+    </section>
+    
+
+    <!-- Apartado "Niños" -->
+    <section id="children" class="hidden">
+        <div class="icon-box">
+           <h2 color="#000000">No niños</h2>
+            <p>Esta noche queremos que disfrutes, por eso nuestro evento es sólo para adultos.</p>
+        </div>
+    </section>
+
+    <!-- Apartado Regalos -->
+    <section id="gifts" class="hidden">
+        <h3>Lluvia de sobres</h3>
+        <img src="regalo.jpg" alt="Ícono de regalo" class="icon">
+        <p class="gift-text">Tu compañía es nuestro mejor regalo. Pero si gustas puedes ayudarnos a alcanzar nuestros proyectos juntos. Puedes hacerlo por medio de efectivo</p>
+    </section>
+
+    <!-- Confirmación de asistencia -->
+    <section id="rsvp" class="hidden">
+        <h3>Confirmación de Asistencia</h3>
+        <form id="rsvpForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+
+            <label for="guest1">Nombre del Primer Acompañante:</label>
+            <input type="text" id="guest1" required>
+
+            <label for="guest2">Nombre del Segundo Acompañante:</label>
+            <input type="text" id="guest2" required>
+
+            <label for="attendance">¿Asistirán?</label>
+            <select id="attendance" required>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+            </select>
+
+            <button type="submit">Confirmar</button>
+        </form>
+        <p>Confirma tu asistencia antes del 30 de marzo de 2025</p>
+        <p>(Si no confirman, se dará por hecho que no nos acompañarán en el evento.)</p>
+    </section>
+
+    <script>
+        // Función de cuenta regresiva
+        function countdown() {
+            const weddingDate = new Date("2025-06-14T18:00:00-07:00").getTime();
+            setInterval(function () {
+                const now = new Date().getTime();
+                const timeLeft = weddingDate - now;
+
+                if (timeLeft <= 0) {
+                    document.getElementById("countdown").innerHTML = "¡Hoy es el gran día!";
+                    return;
+                }
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+                document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+                document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            }, 1000);
+        }
+        countdown();
+
+        // Efecto de aparición al hacer scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".hidden");
+            window.addEventListener("scroll", function () {
+                sections.forEach((section) => {
+                    if (section.getBoundingClientRect().top < window.innerHeight * 0.8) {
+                        section.classList.add("show");
+                    }
+                });
+            });
+
+            // Función para enviar la confirmación por WhatsApp
+            document.getElementById("rsvpForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let name = document.getElementById("name").value.trim();
+            let guest1 = document.getElementById("guest1").value.trim();
+            let guest2 = document.getElementById("guest2").value.trim();
+            let attendance = document.getElementById("attendance").value;
+            
+            if (name === "" || guest1 === "" || guest2 === "") {
+                alert("Por favor, ingresa todos los nombres.");
+                return;
+            }
+
+            let phoneNumber = "+526865909270";
+            let message = `Hola, soy ${name}. Mis acompañantes ${guest1} , ${guest2} y yo ${attendance} asistiremos a la boda.`;
+            let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappURL, "_blank");
+        });
+        });
+    </script>
+</body>
+</html>
