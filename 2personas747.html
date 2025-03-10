@@ -170,18 +170,16 @@
             document.getElementById("rsvpForm").addEventListener("submit", function(event) {
             event.preventDefault();
             let name = document.getElementById("name").value.trim();
-            let guest1 = document.getElementById("guest1").value.trim();
-            let guest2 = document.getElementById("guest2").value.trim();
-            let guest3 = document.getElementById("guest3").value.trim();
+            let guest = document.getElementById("guest").value.trim();
             let attendance = document.getElementById("attendance").value;
             
-            if (name === "" || guest1 === "" || guest2 === "" || guest3 === "") {
+            if (name === "" || guest === "") {
                 alert("Por favor, ingresa todos los nombres.");
                 return;
             }
 
             let phoneNumber = "+526865909270";
-            let message = `Hola, soy ${name}. Yo y mis acompañantes ${guest1}, ${guest2} y ${guest3} ${attendance} asistiremos a la boda.`;
+            let message = `Hola, soy ${name}. Yo y mi acompañante ${guest} ${attendance} asistiremos a la boda.`;
             let whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             
             window.open(whatsappURL, "_blank");
