@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:Spatie calendar-links
+BEGIN:VEVENT
+UID:26631b589c9b0f7f21ee2c6772696245
+SUMMARY:Nuestra Boda: Carolina y Jonathan - Misa
+DTSTAMP:20250223T000000Z
+DTSTART:20250615T010000Z
+DTEND:20250615T020000Z
+DESCRIPTION:Únete a nosotros para la ceremonia de boda en Parroquia Nuestra Señora del Sagrado Corazón.
+LOCATION:https://maps.app.goo.gl/H2QAgAG2hX5EJjuu8
+END:VEVENT
+BEGIN:VEVENT
+UID:26631b589c9b0f7f21ee2c6772696246
+SUMMARY:Nuestra Boda: Carolina y Jonathan - Recepción
+DTSTAMP:20250223T000000Z
+DTSTART:20250615T030000Z
+DTEND:20250615T080000Z
+DESCRIPTION:Celebra con nosotros la recepción en Hacienda El Triunfo.
+LOCATION:https://maps.app.goo.gl/2pw5Jbpd5LBHCuYr5
+END:VEVENT
+END:VCALENDAR

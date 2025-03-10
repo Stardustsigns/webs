@@ -1,0 +1,358 @@
+/* Ajuste para móviles */
+body {
+    font-family: 'Arapey', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #efebe2; /* Fondo pastel */
+    color: black; /* Color general del texto */
+}
+
+@font-face {
+    font-family: 'Rhyme Casual';
+    src: url('rhyme-casual.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arapey';
+    src: url('Arapey-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Títulos en dorado */
+h1, h2, h3 {
+    font-family: 'Rhyme Casual', 'Brush Script MT', cursive;
+    color: #b8860b; /* Dorado */
+}
+
+/* Todo el texto restante en negro */
+p, a, span, li, input, select, button, label {
+    font-family: 'Arapey', serif;
+    color: black;
+}
+
+/* Sección del video */
+#video-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Estilo de la cuenta regresiva */
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.countdown-circle {
+    background-color: #91A663;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-circle p {
+    font-size: 0.8em;
+    margin: 5px 0 0;
+}
+
+/* Secciones ocultas inicialmente */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Estilo de las ubicaciones con efecto 3D */
+.location-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.location-box img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.location-box a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #b8860b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.location-box a:hover {
+    background-color: #996515;
+}
+
+/* Estilo del formulario de confirmación de asistencia */
+form {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, input, select, button {
+    font-size: 1.2em;
+    margin: 10px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: 1px solid #b8860b;
+}
+
+button {
+    background-color: #b8860b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #996515;
+}
+
+/* Pie de página */
+footer {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Estilo para el apartado "Estás Invitado" */
+#invitation {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#invitation h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.invitation-quote {
+    font-size: 1.2em;
+    color: #000000;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Estilo para Padres del Novio y Novia */
+#groom-parents, #bride-parents {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Estilo para la fecha y cuenta regresiva */
+#wedding-date {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#wedding-date h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Botón del calendario */
+.calendar-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #b8860b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-family: 'Arapey', serif;
+    font-size: 1.1em;
+}
+
+.calendar-button:hover {
+    background-color: #996515;
+}
+
+/* Estilo para Vestimenta */
+#dress-code {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.dress-code-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.plus-symbol {
+    font-size: 2em;
+    font-weight: bold;
+    color: #000000; /* Dorado */
+}
+
+#dress-code .icon {
+    width: 100px; /* Aumentamos de 60px a 100px para que sea más grande */
+    height: 100px; /* Agregamos altura para mantener la proporción cuadrada */
+    margin: 15px 0; /* Ajustamos el margen para darle más espacio */
+    object-fit: contain; /* Aseguramos que la imagen se escale correctamente */
+}
+
+.dress-code-text {
+    font-size: 1em;
+    margin-top: 5px;
+}
+
+.prohibited-colors {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.color-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.prohibited {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.color {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.white { background-color: white; }
+.beige { background-color: #f5f5dc; }
+.yellow { background-color: yellow; }
+.red { background-color: red; }
+
+.red-border {
+    border-color: white !important;
+}
+.red-border::after {
+    background-color: white !important;
+}
+
+
+/* Estilo para Regalos */
+#gifts {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#gifts .icon {
+    width: 50px;
+    margin: 10px 0;
+}
+
+.gift-text {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+/* Estilo para el apartado "Niños" */
+#children {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#children .icon-box {
+    display: inline-block;
+    text-align: center;
+}
+
+#children .icon {
+    width: 100px; /* Tamaño cuadrado */
+    height: 100px; /* Tamaño cuadrado */
+    margin: 15px 0; /* Espaciado alrededor */
+    object-fit: contain;
+}
+
+#children p {
+    font-size: 1.1em;
+    margin-top: 10px;
+}
